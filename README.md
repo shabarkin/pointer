@@ -1,6 +1,7 @@
 # Description
 
 The Pointer was developed for hunting and mapping Cobalt Strike servers exposed to the Internet. The tool includes the complete methodology for identifying Cobalt Strike servers. It is intended to speed up the process of detecting Cobalt Strike servers among a large number of potential targets in a short period of time.
+The cost of scanning 250k targets is about 20$, however we are looking for a solution that will make it cheaper.
 
 # Disclaimer
 
