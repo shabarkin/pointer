@@ -89,10 +89,9 @@ The format of the `ips.json` file:
         "1.116.186.39",
         "1.116.207.171",
         "1.116.246.188",
-	...
+ ...
     ]
-}
-```
+}```
 
 ![Screenshot 2021-09-23 at 10.30.06.png](_img/Screenshot_2021-09-23_at_10.30.06.png)
 
