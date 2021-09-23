@@ -42,6 +42,10 @@ The tool is developed and largely based on AWS SQS, Lambda and DynamoDB services
 
 Pointer has the `configure` subcommand with two options:
 
+**WARNING:** The configuration action requires the `function.zip` file to be located within the directory, where a user runs the command. The `function.zip` file is actually a "Pointer server" compiled and zipped to the format required for a Lambda deployment. 
+
+![Screenshot 2021-09-23 at 11.00.10.png](_img/Screenshot_2021-09-23_at_11.00.10.png)
+
 1. Automatic deployment of AWS environment where you need to provide AWS credentials of the admin account: 
 
 ```bash
@@ -91,9 +95,6 @@ The format of the `ips.json` file:
 
 ![Screenshot 2021-09-23 at 10.30.06.png](_img/Screenshot_2021-09-23_at_10.30.06.png)
 
-The configuration action requires the `function.zip` file to be located within the directory, where a user runs the command. The `function.zip` file is actually a "Pointer server" compiled and zipped to the format required for a Lambda deployment. 
-
-![Screenshot 2021-09-23 at 11.00.10.png](_img/Screenshot_2021-09-23_at_11.00.10.png)
 
 ### View status of the scan
 
