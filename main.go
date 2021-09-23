@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/shabarkin/pointer_dev/utils"
+	"github.com/shabarkin/pointer/utils"
 )
 
 var PointerHelper string = `Usage:
