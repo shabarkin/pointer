@@ -38,7 +38,7 @@ The tool is developed and largely based on AWS SQS, Lambda and DynamoDB services
 
 [![Alt text](https://img.youtube.com/vi/YgBc96u0hM4/0.jpg)](https://www.youtube.com/watch?v=YgBc96u0hM4)
 
-## Credentials setup
+## Setting up credentials
 
 Pointer has the `configure` subcommand with two options:
 
