@@ -128,4 +128,4 @@ The only controllable parameter is the suffix for the output file, all the dumpe
 
 ## Demo Video
 
-[https://youtu.be/ToXfFPldGVc](https://youtu.be/ToXfFPldGVc)
+[![Alt text](https://img.youtube.com/vi/ToXfFPldGVc/0.jpg)](https://www.youtube.com/watch?v=ToXfFPldGVc)
