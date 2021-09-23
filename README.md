@@ -40,11 +40,11 @@ The tool is developed and largely based on AWS SQS, Lambda and DynamoDB services
 
 ## Setting up credentials
 
-Pointer has the `configure` subcommand with two options:
-
 **WARNING:** The configuration action requires the `function.zip` file to be located within the directory, where a user runs the command. The `function.zip` file is actually a "Pointer server" compiled and zipped to the format required for a Lambda deployment. 
 
 ![Screenshot 2021-09-23 at 11.00.10.png](_img/Screenshot_2021-09-23_at_11.00.10.png)
+
+Pointer has the `configure` subcommand with two options:
 
 1. Automatic deployment of AWS environment where you need to provide AWS credentials of the admin account: 
 
