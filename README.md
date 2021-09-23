@@ -1,5 +1,3 @@
-# Pointer
-
 # Disclaimer
 
 The tool in beta stage, the detailed walkthrough of main tool components is described in my blog post: [https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a](https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a)
@@ -31,7 +29,7 @@ The tool is developed and heavily based on AWS SQS, Lambda and DynamoDB services
 
 ### Video
 
-[Screen Recording 2021-09-23 at 11.16.41.mov](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screen_Recording_2021-09-23_at_11.16.41.mov)
+[Screen Recording 2021-09-23 at 11.16.41.mov](_img/Screen_Recording_2021-09-23_at_11.16.41.mov)
 
 ## Credentials setup
 
@@ -43,7 +41,7 @@ Pointer has the `configure` subcommand with two options:
 ./pointer configure -aws_access_key_id AKIA85CEHPO3GLIABKZD -aws_secret_access_key LW3bDF8xJvzGgArqMo0h4kuCYsnubU23kGICGp/p
 ```
 
-![Screenshot 2021-09-23 at 10.13.26.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.13.26.png)
+![Screenshot 2021-09-23 at 10.13.26.png](_img/Screenshot_2021-09-23_at_10.13.26.png)
 
 1. Cleaning of the configured AWS environment 
 
@@ -51,11 +49,11 @@ Pointer has the `configure` subcommand with two options:
 ./pointer configure -clear
 ```
 
-![Screenshot 2021-09-23 at 10.13.59.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.13.59.png)
+![Screenshot 2021-09-23 at 10.13.59.png](_img/Screenshot_2021-09-23_at_10.13.59.png)
 
 **WARNING:** It creates `.env` file, which is loaded to global variables each time you call subcommands.
 
-![Screenshot 2021-09-23 at 10.14.17.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.14.17.png)
+![Screenshot 2021-09-23 at 10.14.17.png](_img/Screenshot_2021-09-23_at_10.14.17.png)
 
 ## Scanning
 
@@ -84,11 +82,11 @@ The format of the `ips.json` file:
 }
 ```
 
-![Screenshot 2021-09-23 at 10.30.06.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.30.06.png)
+![Screenshot 2021-09-23 at 10.30.06.png](_img/Screenshot_2021-09-23_at_10.30.06.png)
 
 The configuration action requires the `function.zip` file to be located within the directory, where a user runs the command. The `function.zip` file is actually a "Pointer server" compiled and zipped to the format required for a Lambda deployment. 
 
-![Screenshot 2021-09-23 at 11.00.10.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_11.00.10.png)
+![Screenshot 2021-09-23 at 11.00.10.png](_img/Screenshot_2021-09-23_at_11.00.10.png)
 
 ### View status of the scan
 
@@ -98,7 +96,7 @@ The Pointer retrieves information about the SQS Queue how many packages are in t
 ./pointer scan -status
 ```
 
-![Screenshot 2021-09-23 at 10.31.12.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.31.12.png)
+![Screenshot 2021-09-23 at 10.31.12.png](_img/Screenshot_2021-09-23_at_10.31.12.png)
 
 ### Stop the scan
 
@@ -108,7 +106,7 @@ To stop the scan, Pointer purges all the messages (packages) from the SQS Queue:
 ./pointer scan -stop
 ```
 
-![Screenshot 2021-09-23 at 10.31.59.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.31.59.png)
+![Screenshot 2021-09-23 at 10.31.59.png](_img/Screenshot_2021-09-23_at_10.31.59.png)
 
 ## Dumping
 
@@ -118,11 +116,11 @@ All the scan results are stored in DynamoDB tables: 1. Targets, 2. Beacons.
 ./pointer dump -outfile 23.09.2021
 ```
 
-![Screenshot 2021-09-23 at 10.43.03.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.43.03.png)
+![Screenshot 2021-09-23 at 10.43.03.png](_img/Screenshot_2021-09-23_at_10.43.03.png)
 
 The only controllable parameter is the suffix for the output file, all the dumped results are saved to the to the `.csv`, and `.json` files in the `results` folder (current directory):
 
-![Screenshot 2021-09-23 at 10.51.19.png](Pointer%20%5Bread%20me%5D%2059158b537b0549b9978833a29cdd8201/Screenshot_2021-09-23_at_10.51.19.png)
+![Screenshot 2021-09-23 at 10.51.19.png](_img/Screenshot_2021-09-23_at_10.51.19.png)
 
 **WARNING:** After result dumping Pointer clears the DynamoDB tables, so you don't have a backup of obtained results, only saved one in the `results` folder.
 
