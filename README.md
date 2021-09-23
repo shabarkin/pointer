@@ -4,7 +4,8 @@ The Pointer was developed for hunting and mapping Cobalt Strike servers exposed 
 
 # Disclaimer
 
-The tool in beta stage, the detailed walkthrough of main tool components is described in blog post prepared by Pavel Shabarkin and Michael Koczwara: [https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a](https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a)
+The tool in beta stage (testing in progress)
+The detailed walkthrough of main tool components is described in blog post prepared by Pavel Shabarkin and Michael Koczwara: [https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a](https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a)
 
 I recommend using the separate AWS account for scanning and mapping the Cobalt Strike servers. 
 
