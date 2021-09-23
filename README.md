@@ -1,13 +1,12 @@
 # Description
 
-The Pointer was developed for hunting and mapping Cobalt Strike servers exposed to the Internet. The tool involves the complete methodology for identifying the Cobalt Strike servers. It is intended to speed up the process of identifying the Cobalt Strike servers among the big number of potential targets in a short period of time.
+The Pointer was developed for hunting and mapping Cobalt Strike servers exposed to the Internet. The tool includes the complete methodology for identifying Cobalt Strike servers. It is intended to speed up the process of detecting Cobalt Strike servers among a large number of potential targets in a short period of time.
 
 # Disclaimer
 
-The tool in beta stage (testing in progress).
-The detailed walkthrough of main tool components is described in blog post prepared by Pavel Shabarkin and Michael Koczwara: [https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a](https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a)
+The tool is in beta stage (testing in progress). A detailed overview of main components of the tool is described in the blog post prepared by Pavel Shabarkin and Michael Koczwara: [https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a](https://medium.com/@shabarkin/pointer-hunting-cobalt-strike-globally-a334ac50619a)
 
-I recommend using the separate AWS account for scanning and mapping the Cobalt Strike servers. 
+I recommend using a separate AWS account for scanning and mapping Cobalt Strike servers.
 
 # Install
 
@@ -19,9 +18,9 @@ go get -u github.com/shabarkin/pointer
 
 # Basic Usage
 
-The tool is developed and heavily based on AWS SQS, Lambda and DynamoDB services. Pointer has the `configure` subcommand for automatic deployment of IAM, Lambda, SQS, DynamoDB, and Autoscaling services. To configure all of these services the Pointer needs permissions to manage them, for simplicity we recommend providing to the Pointer the administrative type of account which includes all the required permissions. That's why I recommend using the separate AWS account, especially if you are using other Lambda functions within your AWS account.
+The tool is developed and largely based on AWS SQS, Lambda and DynamoDB services. Pointer has a `configure` subcommand for automatic deployment of IAM, Lambda, SQS, DynamoDB, and Autoscaling services. To configure all of these services Pointer needs permissions to manage them, for simplicity we recommend providing Pointer with an administrative type account that includes all of the necessary permissions. That's why I recommend using a separate AWS account, especially if you use other Lambda functions within your AWS account.
 
-## Creating the AWS user account in AWS Console
+## Creating an AWS user account in the AWS Console
 
 ### Instruction
 
@@ -36,7 +35,7 @@ The tool is developed and heavily based on AWS SQS, Lambda and DynamoDB services
 
 Pointer has the `configure` subcommand with two options:
 
-1. Automatic deployment of the AWS environment, where you should supply AWS credentials of the admin account: 
+1. Automatic deployment of AWS environment where you need to provide AWS credentials of the admin account: 
 
 ```bash
 ./pointer configure -aws_access_key_id AKIA85CEHPO3GLIABKZD -aws_secret_access_key LW3bDF8xJvzGgArqMo0h4kuCYsnubU23kGICGp/p
@@ -62,7 +61,7 @@ The `scan` subcommand includes 3 options: 1. launch the scan 2. stop the scan 3.
 
 ### Launch the scan
 
-The Pointer parses the local json file (`ips.json`) with a list of IPs, optimally splits them into packets (10 IPs), and then adds the packets to be processed to the SQS queue: 
+The Pointer tool parses the local json file (`ips.json`) with a list of IPs, optimally splits them into packets (10 IPs), and then adds the packets to be processed to the SQS queue: 
 
 ```bash
 ./pointer scan -targets ips.json
@@ -91,7 +90,7 @@ The configuration action requires the `function.zip` file to be located within t
 
 ### View status of the scan
 
-The Pointer retrieves information about the SQS Queue how many packages are in the queue and waiting for the scan and how many packages are processed at the current moment:
+The Pointer retrieves information about the SQS Queue, how many packages are in the queue and waiting to be scanned, and how many packages are being processed at the current moment:
 
 ```bash
 ./pointer scan -status
@@ -123,7 +122,7 @@ The only controllable parameter is the suffix for the output file, all the dumpe
 
 ![Screenshot 2021-09-23 at 10.51.19.png](_img/Screenshot_2021-09-23_at_10.51.19.png)
 
-**WARNING:** After result dumping Pointer clears the DynamoDB tables, so you don't have a backup of obtained results, only saved one in the `results` folder.
+**WARNING:** After result dumping, Pointer clears the DynamoDB tables, so you won't have a backup of the results obtained, only the one saved in the `results` folder.
 
 **The data samples you may find here:** [https://docs.google.com/spreadsheets/d/1akSzGDq8ddn97rNfr7BS0w2HcoR52ircFaSMh-OEjTU/edit#gid=311496774](https://docs.google.com/spreadsheets/d/1akSzGDq8ddn97rNfr7BS0w2HcoR52ircFaSMh-OEjTU/edit#gid=311496774)
 
