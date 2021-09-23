@@ -30,7 +30,7 @@ The tool is developed and heavily based on AWS SQS, Lambda and DynamoDB services
 
 ### Video
 
-[Screen Recording 2021-09-23 at 11.16.41.mov](_img/Screen_Recording_2021-09-23_at_11.16.41.mov)
+[![Alt text](https://img.youtube.com/vi/YgBc96u0hM4/0.jpg)](https://www.youtube.com/watch?v=YgBc96u0hM4)
 
 ## Credentials setup
 
