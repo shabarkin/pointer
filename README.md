@@ -18,6 +18,8 @@ go get -u github.com/shabarkin/pointer
 or 
 ```
 git clone https://github.com/shabarkin/pointer.git
+```
+```
 go build .
 ```
 
