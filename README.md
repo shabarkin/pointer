@@ -13,11 +13,11 @@ I recommend using a separate AWS account for scanning and mapping Cobalt Strike 
 If you have Go installed and configured (i.e. with `$GOPATH/bin` in your `$PATH`):
 
 ```
-go get -u github.com/shabarkin/pointer
+sudo go get -u github.com/shabarkin/pointer
 ```
 or 
 ```
-git clone https://github.com/shabarkin/pointer.git
+sudo git clone https://github.com/shabarkin/pointer.git
 ```
 ```
 go build .
