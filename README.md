@@ -20,7 +20,7 @@ or
 sudo git clone https://github.com/shabarkin/pointer.git
 ```
 ```
-go build .
+sudo go build .
 ```
 
 # Basic Usage
