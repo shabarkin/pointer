@@ -194,8 +194,8 @@ func AutoDeploy() {
 			},
 		},
 		ProvisionedThroughput: &dynamodbTypes.ProvisionedThroughput{
-			ReadCapacityUnits:  aws.Int64(10),
-			WriteCapacityUnits: aws.Int64(10),
+			ReadCapacityUnits:  aws.Int64(ReadCapacityUnits),
+			WriteCapacityUnits: aws.Int64(WriteCapacityUnits),
 		},
 	})
 
@@ -215,8 +215,8 @@ func AutoDeploy() {
 			},
 		},
 		ProvisionedThroughput: &dynamodbTypes.ProvisionedThroughput{
-			ReadCapacityUnits:  aws.Int64(10),
-			WriteCapacityUnits: aws.Int64(10),
+			ReadCapacityUnits:  aws.Int64(ReadCapacityUnits),
+			WriteCapacityUnits: aws.Int64(WriteCapacityUnits),
 		},
 	})
 
@@ -236,8 +236,8 @@ func AutoDeploy() {
 			},
 		},
 		ProvisionedThroughput: &dynamodbTypes.ProvisionedThroughput{
-			ReadCapacityUnits:  aws.Int64(10),
-			WriteCapacityUnits: aws.Int64(10),
+			ReadCapacityUnits:  aws.Int64(ReadCapacityUnits),
+			WriteCapacityUnits: aws.Int64(WriteCapacityUnits),
 		},
 	})
 
@@ -602,8 +602,8 @@ func ClearDatabases() {
 			},
 		},
 		ProvisionedThroughput: &dynamodbTypes.ProvisionedThroughput{
-			ReadCapacityUnits:  aws.Int64(10),
-			WriteCapacityUnits: aws.Int64(10),
+			ReadCapacityUnits:  aws.Int64(ReadCapacityUnits),
+			WriteCapacityUnits: aws.Int64(WriteCapacityUnits),
 		},
 	})
 
@@ -623,8 +623,8 @@ func ClearDatabases() {
 			},
 		},
 		ProvisionedThroughput: &dynamodbTypes.ProvisionedThroughput{
-			ReadCapacityUnits:  aws.Int64(10),
-			WriteCapacityUnits: aws.Int64(10),
+			ReadCapacityUnits:  aws.Int64(ReadCapacityUnits),
+			WriteCapacityUnits: aws.Int64(WriteCapacityUnits),
 		},
 	})
 
@@ -644,8 +644,8 @@ func ClearDatabases() {
 			},
 		},
 		ProvisionedThroughput: &dynamodbTypes.ProvisionedThroughput{
-			ReadCapacityUnits:  aws.Int64(10),
-			WriteCapacityUnits: aws.Int64(10),
+			ReadCapacityUnits:  aws.Int64(ReadCapacityUnits),
+			WriteCapacityUnits: aws.Int64(WriteCapacityUnits),
 		},
 	})
 

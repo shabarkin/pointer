@@ -80,6 +80,9 @@ var LambdaFunction string = "pointer"
 var IAMRoleName string = "pointer"
 var SQSQueue string = "pointer"
 
+var ReadCapacityUnits int64 = 40
+var WriteCapacityUnits int64 = 40
+
 func LoadTargets(filename string) (targets ScanTargets) {
 	if _, err := os.Stat(filename); !os.IsNotExist(err) {
 		file, _ := ioutil.ReadFile(filename)
