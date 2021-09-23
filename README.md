@@ -43,7 +43,7 @@ Pointer has the `configure` subcommand with two options:
 
 ![Screenshot 2021-09-23 at 10.13.26.png](_img/Screenshot_2021-09-23_at_10.13.26.png)
 
-1. Cleaning of the configured AWS environment 
+2. Cleaning of the configured AWS environment 
 
 ```bash
 ./pointer configure -clear
