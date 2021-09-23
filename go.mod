@@ -1,4 +1,4 @@
-module github.com/shabarkin/pointer_dev
+module github.com/shabarkin/pointer
 
 go 1.15
 
