@@ -5,5 +5,5 @@
 GOOS=linux go build .
 ```
 ```
-zip function.zip main
+zip function.zip pointer_server
 ```
