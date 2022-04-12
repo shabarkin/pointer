@@ -16,6 +16,9 @@ If you have Go installed and configured (i.e. with `$GOPATH/bin` in your `$PA
 ```
 sudo go get -u github.com/shabarkin/pointer
 ```
+```
+sudo go install -v github.com/shabarkin/pointer@latest
+```
 or 
 ```
 sudo git clone https://github.com/shabarkin/pointer.git
